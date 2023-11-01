@@ -1,0 +1,21 @@
+t = -2:0.1:2;
+fc = 1;
+x = cos(2*pi*fc*t)
+y = cos(2*pi*fc*t+pi)
+figure(1);plot(t,x);grid;
+xlabel('time,sec');
+ylabel('amplitude,volt');
+title('cosine waveform');
+
+figure(2);plot(t,y);grid;
+xlabel('time,sec');
+ylabel('amplitude,volt');
+title('cosine waveform with phase shift of pi radius');
+
+figure(3);plot(t,x,'k--',t,y,'o--');grid;
+
+subplot(3,1,1);plot(t,x);grid; 
+subplot(3,1,2);plot(t,y);grid;
+subplot(3,1,3);plot(t,x-y);grid;
+
+n = 4
